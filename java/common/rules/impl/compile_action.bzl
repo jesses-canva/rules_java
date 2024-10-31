@@ -166,7 +166,7 @@ def compile_action(
 
     compilation_info = struct(
         files_to_build = [output_class_jar],
-        runfiles = [output_class_jar] if source_files or source_jars or resources else [],
+        runfiles = [],
         # TODO(ilist): collect compile_jars from JavaInfo in deps & exports
         compilation_classpath = java_info.compilation_info.compilation_classpath,
         javac_options = java_info.compilation_info.javac_options,
